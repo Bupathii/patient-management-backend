@@ -67,12 +67,44 @@ src/
 - `GET /health` - health check
 - `GET /api/patients` - list patients
 - `POST /api/patients` - create patient
-- `PATCH /api/patients/auto-update-ages` - TODO placeholder
-- `PATCH /api/patients/:patientId/address-change` - TODO placeholder
+- `PATCH /api/patients/auto-update-ages` - update ages based on current year
+- `PATCH /api/patients/:patientId/address-change` - handle address change request
 - `GET /api/appointments` - list appointments
 - `POST /api/appointments` - create appointment
-- `GET /api/appointments/doctor-availability` - TODO placeholder
-- `PATCH /api/appointments/:appointmentId/cancel` - TODO placeholder
+- `GET /api/appointments/doctor-availability?doctorName=...&date=YYYY-MM-DD&time=HH:mm` - check availability
+- `PATCH /api/appointments/:appointmentId/cancel` - cancel appointment
+
+## Postman Test Payloads
+Create patient:
+```json
+{
+  "patientId": "P001",
+  "name": "John Doe",
+  "nic": "123456789V",
+  "age": 32,
+  "address": "Colombo",
+  "previousCaseHistory": ["Diabetes"]
+}
+```
+
+Create appointment:
+```json
+{
+  "appointmentId": "A001",
+  "patientId": "P001",
+  "date": "2026-02-23",
+  "time": "10:30",
+  "doctorName": "Dr. Silva"
+}
+```
+
+Address change request:
+```json
+{
+  "newAddress": "Kandy",
+  "reason": "Moved to new residence"
+}
+```
 
 ## Branch Plan (Recommended)
 1. `development` - base scaffold (this step)
