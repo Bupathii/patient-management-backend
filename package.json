@@ -1,0 +1,26 @@
+{
+  "name": "patient-management-backend",
+  "version": "1.0.0",
+  "description": "Patient management backend take-home project",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "check": "node --check src/server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "patient-management"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^9.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
