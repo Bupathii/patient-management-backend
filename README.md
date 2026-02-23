@@ -15,7 +15,8 @@ Node.js + Express backend starter for the university take-home project.
 ## Tech Stack
 - Node.js
 - Express.js
-- In-memory storage (for initial scaffold)
+- MongoDB (connection ready)
+- In-memory storage (temporary for current service logic)
 
 ## Quick Start
 1. Install dependencies:
@@ -26,7 +27,11 @@ npm install
 ```bash
 copy .env.example .env
 ```
-3. Run in development mode:
+3. Set your MongoDB connection string in `.env`:
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
+4. Run in development mode:
 ```bash
 npm run dev
 ```
